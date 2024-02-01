@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Responsive-images</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Responsive Images</h1>
-
-        <section>
-            <h2>Same image different sizes</h2>
-            <img src="https://placehold.co/320x180" alt="a-place-holder" class="placeholder-1"
-                 srcset="https://placehold.co/480x270 480w,
+      <h1>Responsive Images</h1>
+      <section>
+        <h2>Same image different sizes</h2>
+        <img src="https://placehold.co/320x180" alt="a-place-holder" class="placeholder-1" srcset="https://placehold.co/480x270 480w,
                          https://placehold.co/720x405 720w,
-                         https://placehold.co/960x540 960w"
-                 sizes="(max-width: 480px) 480px,
+                         https://placehold.co/960x540 960w" sizes="(max-width: 480px) 480px,
                         (max-width: 720px) 720px,
                         (max-width: 960px) 960px">
-        </section>
-        
-
-        <section>
-            <h2> Same image different resolutions</h2>
-            <img src="https://placehold.co/320x180" alt="a-place-holder" class="resolutions"
-            srcset="https://placehold.co/400x400,
+      </section>
+      <section>
+        <h2> Same image different resolutions</h2>
+        <img src="https://placehold.co/320x180" alt="a-place-holder" class="resolutions" srcset="https://placehold.co/400x400,
             https://placehold.co/600x600 2x,
             https://placehold.co/900x900 3x,">
-            
-        </section>
-
+      </section>
+      <section>
+        <h2> Art direction problem</h2>
+        <picture>
+          <source srcset="img/art/landscape/lego_landscape_1200.png" media="(min-width: 1200px)" />
+          <source srcset="img/art/landscape/lego_landscape_900.png" media="(min-width: 900px)" />
+          <source srcset="img/art/landscape/lego_landscape_640.png" media="(min-width: 650px)" />
+          <img src="" alt="dog-sitting" class="resolutions">
+        </picture>
+      </section>
     </div>
-</body>
+  </body>
 </html>
